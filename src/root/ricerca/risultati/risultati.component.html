@@ -1,0 +1,20 @@
+<div *ngIf="selezione == 'risultati'">
+  <h1>
+    {{Titolo}}
+  </h1>
+  <div>
+    Posizione: <span id = "posizione">{{risultato[0]}}</span><br>
+    Autore: <span id = "autore">{{risultato[1]}}</span><br>
+    Titolo: <span id = "titolo">{{risultato[2]}}</span><br><br>
+  </div>
+  <div *ngIf="risultato[3]==undefined" id = "campo_nome">
+  <b>Prestito</b><br>
+  Nominativo: <input id = "nominativo"><button (click) = "prestito()">presta</button><br><br>
+  <button (click) = "rimozione()">Rimozione</button><br><br>
+  </div>
+  <div *ngIf="risultato[3]!=undefined" id = "campo_nome">
+  <button id = "bottone_restituzione" (click)="restituzione()">Restituzione</button><br><br>
+  </div>
+  <div id = "notifica"></div><br><br>
+  
+</div>

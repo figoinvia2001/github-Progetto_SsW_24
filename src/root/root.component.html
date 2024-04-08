@@ -1,0 +1,12 @@
+<div *ngIf="selezione == undefined">
+  <h1>
+    {{Titolo}}
+  </h1>
+  <button (click)='bottone_ricerca()'>{{bottone1}}</button><br><br>
+  <button (click)='bottone_inserimento()'>{{bottone2}}</button><br><br>
+</div>
+<app-ricerca [selezione]="selezione"></app-ricerca>
+<app-inserimento [selezione]="selezione"></app-inserimento>
+<button id='esci' (click)='clean()' hidden>Esci</button>
+
+
